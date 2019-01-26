@@ -1,0 +1,80 @@
+<ion-view class="maps-view" cache-view="false" ng-init="centerOnMe()">
+  <ion-nav-title>
+    <span>Mapss1111</span>
+  </ion-nav-title>
+  <ion-content scroll="false">
+    <div class="mapWrap"  data-tap-disabled="true">
+
+      <map center="{{center_position.lat}},{{center_position.lng}}" zoom="10">
+        <marker>
+            position="{{current_position.lat}},{{current_position.lng}}"
+            title="Hello Marker"
+            visible="true">
+        </marker>
+
+
+
+ <div ng-repeat="post in posts">
+<info-window id="1"  position="{{post.lat}},{{post.lng}}" visible="true">
+          <div ng-non-bindable="">
+            
+            <b>{{post.title}}</b><br>
+            <b>{{post.price}}</b><br>
+            <a href="">
+            <img style=" border-radius: 10px;" src="http://lorempixel.com/50/50/food/?v=1"></img></a> <br>
+           
+          </div>
+        </info-window>
+       
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <info-window id="1" position="{{info_position.lat}},{{info_position.lng}}" visible="true">
+          <div ng-non-bindable="">
+            
+            <b>Ford Fusion</b><br>
+            <b>$150000</b><br>
+            <a href="">
+            <img style=" border-radius: 10px;" src="http://lorempixel.com/50/50/food/?v=1"></img></a> <br>
+           
+          </div>
+        </info-window>
+
+         <info-window id="2" position="34, -80.9" visible="true">
+          <div ng-non-bindable="">
+            <b>Kia</b><br>
+            <b>$6000</b><br>
+          
+            <a href="http:\\www.google.com"><img style=" border-radius: 10px;" src="http://lorempixel.com/50/50/food/?v=1"></img></a>
+            
+          </div>
+        </info-window>
+
+
+      </map>
+    </div>
+
+      <div class="row center-map-action">
+        <div class="col">
+          <div class="list">
+            <div class="item item-input-inset">
+
+              <a class="button button-icon icon ion-pinpoint" ng-click="centerOnMe()"></a>
+              <label class="item-input-wrapper">
+                <input type="text" placeholder="My Location" disabled ng-model="searchMap()">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

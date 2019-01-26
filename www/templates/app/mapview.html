@@ -1,0 +1,79 @@
+<ion-view class="maps-view" cache-view="false" ng-init="centerOnMe()">
+  <ion-nav-title>
+    <span>MapView</span>
+  </ion-nav-title>
+  <ion-content scroll="false">
+
+
+
+    <div class="mapWrap"  data-tap-disabled="true">
+
+
+
+
+      <map center="{{center_position.lat}},{{center_position.lng}}" zoom="10">
+   
+
+
+
+
+<!-- 
+    <info-window id="myInfoWindow">
+            <div ng-non-bindable>
+                <h4>{{selectedCity.name}}</h4>
+            </div>
+        </info-window>
+        <marker ng-repeat="c in cities"
+                position="{{c.pos}}" title="{{c.name}}" id="{{c.id}}" on-click="showCity(event, c)">
+        </marker> -->
+      <marker ng-repeat="post in posts" position="{{post.pos._latitude}},{{post.pos._longitude}}" on-click="showpost(event, post)"></marker>
+
+   
+
+
+
+
+
+         <info-window id="2" position="34, -80.9" visible="true">
+          <div ng-non-bindable="">
+            <b>Kia</b><br>
+            <b>$6000</b><br>
+          
+            <a href="http:\\www.google.com"><img style=" border-radius: 10px;" src="http://lorempixel.com/50/50/food/?v=1"></img></a>
+            
+          </div>
+        </info-window>
+
+          <info-window id="2" position="34, -81" visible="true">
+          <div ng-non-bindable="">
+            <b>Kia</b><br>
+            <b>$6000</b><br>
+          
+            <a href="http:\\www.google.com"><img style=" border-radius: 10px;" src="http://lorempixel.com/50/50/food/?v=1"></img></a>
+            
+          </div>
+        </info-window>
+
+
+      </map>
+    </div>
+
+      <div class="row center-map-action">
+        <div class="col">
+          <div class="list">
+            <div class="item item-input-inset">
+
+              <a class="button button-icon icon ion-pinpoint" ng-click="centerOnMe()"></a>
+              <label class="item-input-wrapper" id="search-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input id="searchInput" type="text" placeholder="Search Location" ng-model="query" ng-change="searchMap()">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  </ion-content>
+</ion-view>

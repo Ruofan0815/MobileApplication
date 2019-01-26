@@ -1,0 +1,45 @@
+<ion-view class="feed-entries-view" >
+  <ion-nav-title>
+    <span>{{sourceTitle}}</span>
+  </ion-nav-title>
+  <ion-content>
+    <!-- Refresh to get the new posts -->
+   <!--  <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+    </ion-refresher> -->
+   <div class="list card">
+
+    <div class="item item-avatar">
+      <img src="{{img}}">
+      <h2>{{sourceTitle}}</h2>
+      <p>{{createtime}}</p>
+    </div>
+
+    <div class="item item-body">
+      <div class="list card" ng-repeat="img in images">
+        <div class="item item-image">
+          <img ng-src="{{img}}">
+        </div>
+        <!-- <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item assertive image-option" ng-click="removeImage(img)">
+            <i class="icon ion-trash-a assertive"></i>
+            Remove
+          </a>
+        </div> -->
+      </div>
+      <p>
+        This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+        the content is from a card-body consisting of an image and paragraph text. The footer
+        consists of tabs, icons aligned left, within the card-footer.
+      </p>
+      <p>
+        <a href="#" class="subdued">1 Like</a>
+        <a href="#" class="subdued">5 Comments</a>
+      </p>
+    </div>
+    <div class="item item-body">
+      <p>{{price}}$</p>
+    </div>
+
+  </div>
+  </ion-content>
+</ion-view>

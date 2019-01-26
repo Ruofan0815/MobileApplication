@@ -1,0 +1,32 @@
+[
+	{
+		"id":"cars",
+		"title":"Cars",
+		"image":"img/feeds/car.jpg"
+	},
+	{
+		"id":"pets",
+		"title":"Pets",
+		"image":"img/feeds/cat_dog.jpg"
+	},
+	{
+		"id":"electronics",
+		"title":"Electronics",
+		"image":"img/feeds/electronics.jpeg"
+	},
+	{
+		"id":"computers",
+		"title":"Computers",
+		"image":"img/feeds/computer.jpeg"
+	},
+	{
+		"id":"books",
+		"title":"Books",
+		"image":"img/feeds/books.jpg"
+	},
+	{
+		"id":"houses",
+		"title":"Houses",
+		"image":"img/feeds/house.jpg"
+	}
+]

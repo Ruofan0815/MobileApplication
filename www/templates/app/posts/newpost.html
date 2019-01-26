@@ -1,0 +1,61 @@
+<ion-view class="category-feeds-view" cache-view="false">
+  <ion-nav-title>
+    <span>New Post</span>
+  </ion-nav-title>
+  <ion-content>
+	<div class="list">
+	  <label class="item item-input">
+	    <input type="text" placeholder="Title" ng-model="formData.title">
+	  </label>
+    <label class="item item-input item-select">
+	    <div class="input-label">
+	      Category
+	    </div>
+	    <select ng-model="formData.category">
+	      <option selected>Cars</option>
+	      <option>Pets</option>
+	      <option>Electronics</option>
+	      <option>Computers</option>
+	      <option>Books</option>
+	      <option>Houses</option>
+	    </select>
+	  </label>
+	  <label class="item item-input">
+	    <input type="number" placeholder="Price" ng-model="formData.price">
+	  </label>
+	  <a class="button" ng-click="getMyLocation()"><i class="icon ion-location"></i> My Location</a>
+	  <label class="item item-input">
+	    <div class="input-label">
+	      State
+	    </div>
+	    <span>{{state}}</span>
+	  </label>
+	  <label class="item item-input">
+	    <div class="input-label">
+	      City
+	    </div>
+	    <span>{{city}}</span>
+	  </label>
+	  <label class="item item-input">
+	    <textarea placeholder="Description" ng-model="formData.description"></textarea>
+	  </label>
+	  <label>
+	  	<button class="button button-block button-dark" ng-click="selImages()">
+	      Select Images
+	    </button>
+       <div class="list card" ng-repeat="img in images">
+	      <div class="item item-image">
+	        <img ng-src="{{img}}">
+	      </div>
+	      <!-- <div class="item tabs tabs-secondary tabs-icon-left">
+	        <a class="tab-item assertive image-option" ng-click="removeImage(img)">
+	          <i class="icon ion-trash-a assertive"></i>
+	          Remove
+	        </a>
+	      </div> -->
+	    </div>
+     </label>
+	</div> 
+	<button class="button button-block button-calm" ng-click="confirm()">Confirm</button>  
+  </ion-content>
+</ion-view>
